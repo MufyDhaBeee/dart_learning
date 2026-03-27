@@ -1,8 +1,8 @@
 void main(){
  print('Hello world!');
  //---------------------------printing name-------------------------------------
- var name = "Pomelo";
- print(name);
+ var names = "Pomelo";
+ print(names);
 //----------------------------variable name--------------------------------------
 var firstName = "John";
 var lastName = "Doe";
@@ -20,4 +20,19 @@ print("The sum is $sum");
 print("The sub is $sub");
 print("The multi is $multi");
 print('The div is $div');
+//data types topic
+String name = "John";
+String address = "USA";
+num age = 20;
+num height = 5.9;
+bool isMarried = false;
+
+// printing variables value   
+print("Name is $name");
+print("Address is $address");
+print("Age is $age");
+print("Height is $height");
+print("Married Status is $isMarried");
+
+
 }
