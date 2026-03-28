@@ -3,7 +3,7 @@ void main(){
  //---------------------------printing name-------------------------------------
  var names = "Pomelo";
  print(names);
-//----------------------------variable name--------------------------------------
+//----------------------------variables name--------------------------------------
 var firstName = "John";
 var lastName = "Doe";
 print("Full name is $firstName $lastName");
@@ -34,5 +34,41 @@ print("Age is $age");
 print("Height is $height");
 print("Married Status is $isMarried");
 
+//----------------------------data types----------------------------------->>
+
+int num3 = 100;
+double num4 = 130.2;
+num num5 = 50;
+num num6 = 50.5;
+
+num sum01 = num3 + num4 + num5 + num6;
+ print("Num 3 is $num3");
+ print("Num 4 is $num4");
+ print("Num 5 is $num5");
+ print("Num 6 is $num6");
+ print('Sum is a $sum01');
+//Round Double Value To 2 Decimal Places
+
+// Declaring Variables
+double price = 1130.2232323233233; // valid.
+print(price.toStringAsFixed(2));
+//string
+String schoolName="Diamond school";
+String addressess ="New york 2140";
+print("School name is $schoolName and address is $addressess");
+//multi line string
+String multiLineText = '''This is Multi Line Text
+with 3 single quote
+I am also writing here.
+''';
+String otherMultiLineText="""This is other Multi Line Text
+with 3 single quote
+I am also writing here.
+""";
+print("Multi-line text is a $multiLineText");
+print("other multi-line text are $otherMultiLineText");
+
 
 }
+
+
