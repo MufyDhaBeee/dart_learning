@@ -67,6 +67,18 @@ I am also writing here.
 """;
 print("Multi-line text is a $multiLineText");
 print("other multi-line text are $otherMultiLineText");
+//special character in String (new line and tab)
+print("I am from \nCanada "); //(newline)
+print("I am from \tCanada "); //tab
+//Create A Raw String In Dart
+num prices = 10;
+String withoutRawString = "The value of price is \n$price";
+String withRawString = r"The value of price is \t $price";
+
+print("Without Raw : $withRawString");
+print("With Raw : $withRawString");
+
+
 
 
 }
