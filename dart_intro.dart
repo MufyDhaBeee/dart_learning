@@ -50,8 +50,8 @@ num sum01 = num3 + num4 + num5 + num6;
 //Round Double Value To 2 Decimal Places
 
 // Declaring Variables
-double price = 1130.2232323233233; // valid.
-print(price.toStringAsFixed(2));
+double prices = 1130.2232323233233; // valid.
+print(prices.toStringAsFixed(2));
 //string
 String schoolName="Diamond school";
 String addressess ="New york 2140";
@@ -71,12 +71,37 @@ print("other multi-line text are $otherMultiLineText");
 print("I am from \nCanada "); //(newline)
 print("I am from \tCanada "); //tab
 //Create A Raw String In Dart
-num prices = 10;
-String withoutRawString = "The value of price is \n$price";
-String withRawString = r"The value of price is \t $price";
+num price = 10;
+String withoutRawString = "The value of price is \t $price"; // regular String
+String withRawString =r"The value of price is \t $price"; // raw String
 
-print("Without Raw : $withRawString");
-print("With Raw : $withRawString");
+print("Without Raw: $withoutRawString"); // regular result
+print("With Raw: $withRawString"); // with raw result
+//---------------------------Type coversion----------------------------------------------->
+//<<<====================> Convert  String to Int <========================================>>>
+String strvalue = "1";
+print("Type of strvalue is ${strvalue.runtimeType}");
+int intvalue = int.parse(strvalue);
+print("Value of intvalue is $intvalue");
+print("Type of int value is ${intvalue.runtimeType}");
+//<<<====================> Convert  String to Double <========================================>>>
+String strvalue1 ="1.1";
+print("Type of strvalue is ${strvalue1.runtimeType}");
+double doublevalue = double.parse(strvalue1);
+print("Value of doublevalue is ${doublevalue}");
+print("Type of double value is ${doublevalue.runtimeType}");
+//<<<====================> Convert  Int to String <========================================>>>
+int one = 1;
+print("Type of one is ${one.runtimeType}");
+String oneInString=one.toString();
+print("Value  of OneInString is $oneInString");
+print("Type of oneInString is ${oneInString.runtimeType}");
+//<<<====================> Convert  Double to Int <========================================>>>
+double num01 = 10.01;
+int num02 = num01.toInt();
+print("The value of num1 is $num01. it's type is ${num01.runtimeType}");
+print("The value of num2 is $num02. it's type is ${num02.runtimeType} "); 
+
 
 
 
