@@ -117,6 +117,44 @@ print("Value of names[5] is ${namess[5]}");
 
 int length = namess.length;
 print("The Length of names is $length");
+//<<<-----------------------------Sets------------------------------------------>>>
+Set<String>weekday = {"sunday", "monday", "Tuesday", "Wednesday","Thursday", "Friday","saturday"};
+print(weekday);
+//<<<-----------------------------Maps------------------------------------------>>>
+Map<String, String>myDetails = {
+    'name': 'John Doe',
+    'address' : 'USA',
+    'father name': 'James Doe',
+};
+print(myDetails['name']);
+print(myDetails['address']);
+print(myDetails['father name']);
+
+//<<<-----------------------------Var keywords------------------------------------------>>>
+
+var carName = "Benz";
+var fruit ="apple";
+print(carName);
+print(fruit);
+//<<<-----------------------------Runes----------------------------------------------->>>
+String value = 'a';
+print(value.runes);
+//<<<-----------------------------How To Check Runtime Type---------------------------->>>
+var a = 10;
+print(a.runtimeType);
+print(a is int);
+//<<<-----------------------------Optionally Typed Language------------------------------------------>>>
+
+//dynamically Typed---------------------------->>
+dynamic myVariable = 50;
+myVariable = "Hello";
+print(myVariable);
+
+
+
+
+
+
 
 
 
