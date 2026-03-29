@@ -102,6 +102,17 @@ int num02 = num01.toInt();
 print("The value of num1 is $num01. it's type is ${num01.runtimeType}");
 print("The value of num2 is $num02. it's type is ${num02.runtimeType} "); 
 
+//<<<-----------------------Booleans----------------------------------------------->>>
+bool isSingle= true;
+print("Are you single: $isSingle");
+//<<<-----------------------------Lists------------------------------------------>>>
+List<String> namess = ["Pinky", "Ponky", "Punky"];
+print("Value of names is $namess");
+print("Value of names[0] is ${namess[0]}");
+print("Value of names[1] is ${namess[1]}");
+print("Value of names[2] is ${namess[2]}");
+int length = namess.length;
+print("The Length of names is $length");
 
 
 
