@@ -149,6 +149,18 @@ print(a is int);
 dynamic myVariable = 50;
 myVariable = "Hello";
 print(myVariable);
+///------------------------------------------comments---------------------------------------------------
+//<<<-----------------------------Single-Line Comment In Dart------------------------------------------>>>
+// This is single-line comment.
+print("Welcome to Technology Channel.");
+// This is multi-line comment.
+/*
+This is a multi-line comment.
+*/
+    print("Welcome to Technology Channel. hello");  
+    /// This is documentation comment
+    print("Welcome to Technology Channel. huyi");  
+}  
 
 
 
@@ -159,6 +171,9 @@ print(myVariable);
 
 
 
-}
+
+
+
+
 
 
