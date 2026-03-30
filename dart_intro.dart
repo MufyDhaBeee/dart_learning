@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(){
  print('Hello world!');
  //---------------------------printing name-------------------------------------
@@ -234,6 +236,19 @@ String value1 = "Dart Tutorial";
 int age2 = 10;
 print(value1 is String);
 print(age is !int);
+//<<<==========================User Input in Dart==========================================>>>
+//------------------------String User Input---------------------------------->>>
+print("Enter your name:");
+String? name1 = stdin.readLineSync();
+print("The entered name is ${name1}");
+//------------------------Integer User Input------------------------------------->>
+print("Enter number");
+int? number = int.parse(stdin.readLineSync()!);
+print("The entered number is ${number}");
+//------------------------ Floating Point User Input------------------------------------->>
+print("Enter a floating numbers:");
+double? numbers = double.parse(stdin.readLineSync()!);
+print("The entered floating number is ${numbers}");
 
 
 
