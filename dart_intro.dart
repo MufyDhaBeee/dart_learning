@@ -305,6 +305,29 @@ print("List name at 0 index ${listName[0]}");
 print("List name at 1 index ${listName[1]}");
 print("List name at 2 index ${listName[2]}");
 print("List name at 3 index ${listName[3]}");
+//---------------------------toString------------------------------------------------------------------------------>
+int numbers = 20;
+String result = numbers.toString();
+print("Type of number is ${numbers.runtimeType}");
+print("Type of result is ${result.runtimeType}");
+//-------------------Substring------------------------------------------------------------------------------------>
+String  text = "I Love Computer";
+print("Print only computer: ${text.substring(7)}");
+print("Print only love : ${text.substring(2,6)}");
+//---------------------Reverse String In Dart--------------------------------------------------------------------->
+String input = "Hello";
+print("$input Reverse is ${input.split('').reversed.join()}");
+//----------------------------How To Capitalize First Letter Of String In Dart----------------------------------------->
+String text01 = "hello world!";
+print("Capitalized first letter of Strings: ${text01[0].toUpperCase()}${text01.substring(1)}");
+///-------------------------------------------------Solve a Questions------------------------------------------------------->
+///================================================================================================================================================
+//--->1.Write a program to print your name in Dart?
+print("Mufeeda beegum TP");
+//--->2.Write a program to print Hello I am “John Doe” and Hello I’am “John Doe” with single and double quotes.
+print('Hello I am "John Doe"');
+print("Hello I am \"John Doe\"");
+
 
 
 
