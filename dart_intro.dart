@@ -561,23 +561,100 @@ void main(){
 //     print(i);
 //     i++;
 // }
-//This program prints 10 to 1 using while loop.
-int j = 10;
-while (j >= 1){
-    print(j);
-    j--;
-}
+// //This program prints 10 to 1 using while loop.
+// int j = 10;
+// while (j >= 1){
+//     print(j);
+//     j--;
+// }
 //Example 3: Display Sum of n Natural Numbers Using While Loop
- int total = 0;
-  int n = 100; // change as per required
-  int i =1;
+//  int total = 0;
+//   int n = 100; // change as per required
+//   int i =1;
 
-  while(i<=n){
-    total = total + i;
+//   while(i<=n){
+//     total = total + i;
+//     i++;
+//   }
+  
+//   print("Total is $total");
+//   //Example 4: Display Even Numbers Between 50 to 100 Using While Loop
+// int i = 50;
+// while(i<=100){
+//   if(i%2 ==0){
+//     print(i);
+//   }
+//   i++;
+// }
+//-----------------------------------------------Do while--------------------------------------------------------------------->
+// //Example 1: To Print 1 To 10 Using Do While Loop
+// int i = 1;
+// do{
+//   print(i);
+//   i++;
+// }while(i<= 10);
+// }
+// //Example 2: To Print 10 To 1 Using Do While Loop
+// int i = 10;
+//   do {
+//     print(i);
+//     i--;
+//   } while(i >= 1);
+// //======================================break and continue===============================================================================
+// //--------------------------------------break-------------------------------------------------------------------->
+// for (int i = 1; i <= 10; i++){
+//   if(i == 5){
+//     break;
+//   }
+//   print(i);
+// }
+// //Example 2: Break In Dart Negative For Loop
+// for (int i = 10; i >= 1; i--){
+//   if(i == 7){
+//     break;
+//   }
+//   print(i);
+// }
+// //------------------------------------------Continue------------------------------------------------------------------
+// //Example 1: Continue In Dart
+// for (int i = 1; i <= 10; i++) {
+//     if (i == 5) {
+//       continue;
+//     }
+//     print(i);
+//   }
+//Example 2: Continue In For Loop Dart
+ for (int i = 10; i >= 1; i--) {
+    if (i == 4) {
+      continue;
+    }
+    print(i);
+ }
+ //Example 3: Continue In Dart While Loop
+ int i = 1;
+  while (i <= 10) {
+    if (i == 5) {
+      i++;
+      continue;
+    }
+    print(i);
     i++;
   }
-  
-  print("Total is $total");
+  //=============================================Exception Handling in Dart=========================================================================================>
+  //Example 1: Try Catch In Dart
+  int a = 18;
+  int b = 0;
+  int res;
+  try{
+    res = a ~/ b;
+    print("Result is $res");
+  }
+  catch(ex){
+    print(ex);
+  }
+
+
+
 
 
 
@@ -588,7 +665,7 @@ while (j >= 1){
 
     
 
-}  
+  
 
 
 
@@ -605,3 +682,4 @@ while (j >= 1){
 
 
 
+}
