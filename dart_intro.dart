@@ -1,5 +1,6 @@
 import 'dart:io';
 
+enum Weather {sunny, snowy, cloudy, rainy}
 void main(){
 //  print('Hello world!');
 //  //---------------------------printing name-------------------------------------
@@ -264,201 +265,219 @@ void main(){
 // print("Using + , Full name is "+FirstName + " " + LastName+ "");
 // print("using interpolation, full name is $FirstName $LastName.");
 // //--------------------------------String Properties Example In Dart------------------------------>
-String str ="hello";
-print(str.codeUnits);
-print(str.isEmpty);
-print(str.isNotEmpty);
-print("The length of the string is:${str.length}");
-//----------------------------------Converting String To Uppercase and Lowercase------------------------>
-String Address1 = "Florida";
-String Address2 = "Texas";
-print("Address 1 in uppercase: ${Address1.toUpperCase()}");
-print("Address 1 in lower case: ${Address1.toLowerCase()}");
-print("Address 2 in uppercase: ${Address2.toUpperCase()}");
-print("Address 2 in lowercase: ${Address2.toLowerCase()}");
-//----------------------------------Converting trim String---------------------------------------------->
-String address1 = " USA";
-String address2 = "Japan ";
-String address3 = "New Delhi";
-print("Result of address 1 trim is ${address1.trim()}"); 
-print("Result of address 2 trim is ${address2.trim()} ");
-print("Result of address 3 trim is ${address3.trim()}");
-print("Result of address 1 trimLeft is ${address1.trimLeft()}");
-print("Result of address 2 trimRighr is ${address2.trimRight()}");
-//---------------------------------Compare strings-------------------------------------------------------->
-String item1="Apple";
-String item2 ="Ant";
-String item3 ="Basket";
-print("Comparing item 1 with item 2 : ${item1.compareTo(item2)}");
-print("Comparing item 1 with item 3 : ${item1.compareTo(item3)}");
-print("comparing item 3 with item 2  : ${item3.compareTo(item1)}");
-//-----------------------------------Replace strings----------------------------------------------------------->
-String Text ="I am good boy I Like a milk. Doctor says milk is good for health";
-String newText = Text.replaceAll("milk", "water");
-print("Original Text: $Text");
-print("Replaced Text: $newText");
-//-------------------------------------Split strings------------------------------------------------------------>
-String allNames = "Nancy , Jonathan , Steve , Robin";
-List<String>listName = allNames.split(",");
-print("value of listName is $listName");
-print("List name at 0 index ${listName[0]}");
-print("List name at 1 index ${listName[1]}");
-print("List name at 2 index ${listName[2]}");
-print("List name at 3 index ${listName[3]}");
-//---------------------------toString------------------------------------------------------------------------------>
-int numbers = 20;
-String result = numbers.toString();
-print("Type of number is ${numbers.runtimeType}");
-print("Type of result is ${result.runtimeType}");
-//-------------------Substring------------------------------------------------------------------------------------>
-String  text = "I Love Computer";
-print("Print only computer: ${text.substring(7)}");
-print("Print only love : ${text.substring(2,6)}");
-//---------------------Reverse String In Dart--------------------------------------------------------------------->
-String input = "Hello";
-print("$input Reverse is ${input.split('').reversed.join()}");
-//----------------------------How To Capitalize First Letter Of String In Dart----------------------------------------->
-String text01 = "hello world!";
-print("Capitalized first letter of Strings: ${text01[0].toUpperCase()}${text01.substring(1)}");
-///-------------------------------------------------Solve a Questions------------------------------------------------------->
-///================================================================================================================================================
-//--->1.Write a program to print your name in Dart?
-print("Mufeeda beegum TP");
-//--->2.Write a program to print Hello I am “John Doe” and Hello I’am “John Doe” with single and double quotes.
-print('Hello I am "John Doe"');
-print("Hello I am \"John Doe\"");
-//===========================================================Conditions==============================================================>
-//---------------------if condition---------------------------------------------------------------------------------------------->
-var age = 20;   
-if(age >= 18){
-    print("You are voter.");
-}
-//-----------------------if-else condition----------------------------------------------------------------------------------------->
-int age1 = 15;
-if(age1 >= 18){
-    print("You are voter.");
-}else{
-    print("you are not voter.");
-}
-//-----------------------Condition Based On Boolean Value--------------------------------------------------------------------------->
-bool isMarried = false;
-if(isMarried){
-    print("You are married");
-}else{
-    print("You are single");
-}
-//--------------------------------If-Else-If Condition------------------------------------------------------------------------------->
-int noOfMonth= 2;
-//check  the no of month
-if(noOfMonth == 1){
-    print("The month is jan");
-}else if(noOfMonth  == 2) {
-    print("The month is feb");
-}else if(noOfMonth == 3 ){
-    print("The month is mar");
-}else if(noOfMonth == 4){
-    print("The month is apr");
-}else if(noOfMonth == 5){
-    print("The month is may");
-}else if(noOfMonth == 6){
-    print("The month is jun");
-}else if(noOfMonth == 7){
-    print("The month is jul");
-}else if(noOfMonth == 8){
-    print("The month is Aug");
-}else if(noOfMonth == 9 ){
-print("The month is sept");
-}else if(noOfMonth == 10){
-    print("The month is oct");
-}else if(noOfMonth == 11){
-    print("The month is nov");
-}else if(noOfMonth == 12){
-    print("The month is dec");
-}else{
-    print("Invalid option given:");
-}
+// String str ="hello";
+// print(str.codeUnits);
+// print(str.isEmpty);
+// print(str.isNotEmpty);
+// print("The length of the string is:${str.length}");
+// //----------------------------------Converting String To Uppercase and Lowercase------------------------>
+// String Address1 = "Florida";
+// String Address2 = "Texas";
+// print("Address 1 in uppercase: ${Address1.toUpperCase()}");
+// print("Address 1 in lower case: ${Address1.toLowerCase()}");
+// print("Address 2 in uppercase: ${Address2.toUpperCase()}");
+// print("Address 2 in lowercase: ${Address2.toLowerCase()}");
+// //----------------------------------Converting trim String---------------------------------------------->
+// String address1 = " USA";
+// String address2 = "Japan ";
+// String address3 = "New Delhi";
+// print("Result of address 1 trim is ${address1.trim()}"); 
+// print("Result of address 2 trim is ${address2.trim()} ");
+// print("Result of address 3 trim is ${address3.trim()}");
+// print("Result of address 1 trimLeft is ${address1.trimLeft()}");
+// print("Result of address 2 trimRighr is ${address2.trimRight()}");
+////---------------------------------Compare strings-------------------------------------------------------->
+// String item1="Apple";
+// String item2 ="Ant";
+// String item3 ="Basket";
+// print("Comparing item 1 with item 2 : ${item1.compareTo(item2)}");
+// print("Comparing item 1 with item 3 : ${item1.compareTo(item3)}");
+// print("comparing item 3 with item 2  : ${item3.compareTo(item1)}");
+// //-----------------------------------Replace strings----------------------------------------------------------->
+// String Text ="I am good boy I Like a milk. Doctor says milk is good for health";
+// String newText = Text.replaceAll("milk", "water");
+// print("Original Text: $Text");
+// print("Replaced Text: $newText");
+// //-------------------------------------Split strings------------------------------------------------------------>
+// String allNames = "Nancy , Jonathan , Steve , Robin";
+// List<String>listName = allNames.split(",");
+// print("value of listName is $listName");
+// print("List name at 0 index ${listName[0]}");
+// print("List name at 1 index ${listName[1]}");
+// print("List name at 2 index ${listName[2]}");
+// print("List name at 3 index ${listName[3]}");
+// //---------------------------toString------------------------------------------------------------------------------>
+// int numbers = 20;
+// String result = numbers.toString();
+// print("Type of number is ${numbers.runtimeType}");
+// print("Type of result is ${result.runtimeType}");
+// //-------------------Substring------------------------------------------------------------------------------------>
+// String  text = "I Love Computer";
+// print("Print only computer: ${text.substring(7)}");
+// print("Print only love : ${text.substring(2,6)}");
+// //---------------------Reverse String In Dart--------------------------------------------------------------------->
+// String input = "Hello";
+// print("$input Reverse is ${input.split('').reversed.join()}");
+// //----------------------------How To Capitalize First Letter Of String In Dart----------------------------------------->
+// String text01 = "hello world!";
+// print("Capitalized first letter of Strings: ${text01[0].toUpperCase()}${text01.substring(1)}");
+// ///-------------------------------------------------Solve a Questions------------------------------------------------------->
+// ///================================================================================================================================================
+// //--->1.Write a program to print your name in Dart?
+// print("Mufeeda beegum TP");
+// //--->2.Write a program to print Hello I am “John Doe” and Hello I’am “John Doe” with single and double quotes.
+// print('Hello I am "John Doe"');
+// print("Hello I am \"John Doe\"");
+// //===========================================================Conditions==============================================================>
+// //---------------------if condition---------------------------------------------------------------------------------------------->
+// var age = 20;   
+// if(age >= 18){
+//     print("You are voter.");
+// }
+// //-----------------------if-else condition----------------------------------------------------------------------------------------->
+// int age1 = 15;
+// if(age1 >= 18){
+//     print("You are voter.");
+// }else{
+//     print("you are not voter.");
+// }
+// //-----------------------Condition Based On Boolean Value--------------------------------------------------------------------------->
+// bool isMarried = false;
+// if(isMarried){
+//     print("You are married");
+// }else{
+//     print("You are single");
+// }
+// //--------------------------------If-Else-If Condition------------------------------------------------------------------------------->
+// int noOfMonth= 2;
+// //check  the no of month
+// if(noOfMonth == 1){
+//     print("The month is jan");
+// }else if(noOfMonth  == 2) {
+//     print("The month is feb");
+// }else if(noOfMonth == 3 ){
+//     print("The month is mar");
+// }else if(noOfMonth == 4){
+//     print("The month is apr");
+// }else if(noOfMonth == 5){
+//     print("The month is may");
+// }else if(noOfMonth == 6){
+//     print("The month is jun");
+// }else if(noOfMonth == 7){
+//     print("The month is jul");
+// }else if(noOfMonth == 8){
+//     print("The month is Aug");
+// }else if(noOfMonth == 9 ){
+// print("The month is sept");
+// }else if(noOfMonth == 10){
+//     print("The month is oct");
+// }else if(noOfMonth == 11){
+//     print("The month is nov");
+// }else if(noOfMonth == 12){
+//     print("The month is dec");
+// }else{
+//     print("Invalid option given:");
+// }
 
-//-------------------->Find Greatest Number Among 3 Numbers<----------------------------------------------------------------------
-int num1 = 1200;
-int num2 = 1000;
-int num3 = 150;
-if(num1 > num2 &&  num1 > num2){
-    print("Num 1 is greater than: i.e $num1");
-}
-if(num2 > num1 && num2 > num3) {
-print("Num 2 is greater: i.e $num2");
-}
-if(num3 > num1 && num3 > num2){
-    print("Num 3 is greater: i.e $num3 ");
-}
-//====================Switch Case=============================================================================================>
-//-----------------Replace If Else If With Switch In Dart---------------------------------------------------------------------->
-// Here you can see the same program using if else if and switch in dart.
-//---Using If Else If----------------->
-var daysOfWeek = 8;
-if(daysOfWeek == 1){
-    print("Day is Sunday");
-}else if(daysOfWeek == 2){
-    print("Day is Monday");
-}else if(daysOfWeek == 3){
-print("Day is Tuesday");
-}else if(daysOfWeek == 4){
-    print("Day is Wednesday");
-}else if(daysOfWeek == 5){
-    print("Day is Thursday");
-}else if(daysOfWeek == 6){
-    print("Day is Friday");
-}else if(daysOfWeek == 7){
-    print("Day is Saturday");
-}else{
-    print("Invalid Weekday.");
-}
-//switch statement-------------------------------------------------------------------------->
-var DaysOfWeek = 4;
-switch(DaysOfWeek){
-    case 1 : 
-    print("Day in Sunday");
-    break;
-    case 2 :
-    print("Day is Monday");
-    break;
-    case 3: 
-    print("Day is Tuesday");
-    break;
-    case 4:
-    print("Days in Wednesday");
-    break;
-    case 5:
-    print("Days in Thursay");
-    break;
-    case 6:
-    print("Days in Friday");
-    break;
-    case 7:
-    print("Days in Saturday");
-    break;
+// //-------------------->Find Greatest Number Among 3 Numbers<----------------------------------------------------------------------
+// int num1 = 1200;
+// int num2 = 1000;
+// int num3 = 150;
+// if(num1 > num2 &&  num1 > num2){
+//     print("Num 1 is greater than: i.e $num1");
+// }
+// if(num2 > num1 && num2 > num3) {
+// print("Num 2 is greater: i.e $num2");
+// }
+// if(num3 > num1 && num3 > num2){
+//     print("Num 3 is greater: i.e $num3 ");
+// }
+// //====================Switch Case=============================================================================================>
+// //-----------------Replace If Else If With Switch In Dart---------------------------------------------------------------------->
+// // Here you can see the same program using if else if and switch in dart.
+// //---Using If Else If----------------->
+// var daysOfWeek = 8;
+// if(daysOfWeek == 1){
+//     print("Day is Sunday");
+// }else if(daysOfWeek == 2){
+//     print("Day is Monday");
+// }else if(daysOfWeek == 3){
+// print("Day is Tuesday");
+// }else if(daysOfWeek == 4){
+//     print("Day is Wednesday");
+// }else if(daysOfWeek == 5){
+//     print("Day is Thursday");
+// }else if(daysOfWeek == 6){
+//     print("Day is Friday");
+// }else if(daysOfWeek == 7){
+//     print("Day is Saturday");
+// }else{
+//     print("Invalid Weekday.");
+// }
+// //switch statement-------------------------------------------------------------------------->
+// var DaysOfWeek = 4;
+// switch(DaysOfWeek){
+//     case 1 : 
+//     print("Day in Sunday");
+//     break;
+//     case 2 :
+//     print("Day is Monday");
+//     break;
+//     case 3: 
+//     print("Day is Tuesday");
+//     break;
+//     case 4:
+//     print("Days in Wednesday");
+//     break;
+//     case 5:
+//     print("Days in Thursay");
+//     break;
+//     case 6:
+//     print("Days in Friday");
+//     break;
+//     case 7:
+//     print("Days in Saturday");
+//     break;
+//     default:
+//     print("Invalid weekdays");
+//     break;
+// }
+// //------------------>Switch Case On Strings-------------------------------------------------------->
+// //This program prints information based on weather value.
+// const weather = "cloudy";
+// switch(weather){
+//     case "sunny":
+//     print("It's a sunny day. put sunscreen");
+//     break;
+//     case "snowy":
+//     print("Get your skis");
+//     break;
+//     case "cloudy":
+//     case "rainy":
+//     print("please bring a Umberalla");
+//     break;
+//     default: 
+//     print("Sorry I am not familiar with such weather");
+//     break;
+// }
+ //--------------->Example of Switch Using Enum In Dart<---------------------------------------------------------------->
+ const weather = Weather.cloudy;
+ switch (weather) {
+    case Weather.sunny:
+        print("Its a sunny day. Put sunscreen.");
+        break;
+    case Weather.snowy:
+        print("Get your skis.");
+      break;
+    case Weather.rainy:
+    case Weather.cloudy:
+      print("Please bring umbrella.");
+      break;
     default:
-    print("Invalid weekdays");
-    break;
-}
-//------------------>Switch Case On Strings-------------------------------------------------------->
-//This program prints information based on weather value.
-const weather = "cloudy";
-switch(weather){
-    case "sunny":
-    print("It's a sunny day. put sunscreen");
-    break;
-    case "snowy":
-    print("Get your skis");
-    break;
-    case "cloudy":
-    case "rainy":
-    print("please bring a Umberalla");
-    break;
-    default: 
-    print("Sorry I am not familiar with such weather");
-    break;
-}
+        print("Sorry I am not familiar with such weather.");
+      break;
+  }
+
 
 
 
