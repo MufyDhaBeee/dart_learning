@@ -460,31 +460,124 @@ void main(){
 //     print("Sorry I am not familiar with such weather");
 //     break;
 // }
- //--------------->Example of Switch Using Enum In Dart<---------------------------------------------------------------->
- const weather = Weather.cloudy;
- switch (weather) {
-    case Weather.sunny:
-        print("Its a sunny day. Put sunscreen.");
-        break;
-    case Weather.snowy:
-        print("Get your skis.");
-      break;
-    case Weather.rainy:
-    case Weather.cloudy:
-      print("Please bring umbrella.");
-      break;
-    default:
-        print("Sorry I am not familiar with such weather.");
-      break;
+//  //--------------->Example of Switch Using Enum In Dart<---------------------------------------------------------------->
+//  const weather = Weather.cloudy;
+//  switch (weather) {
+//     case Weather.sunny:
+//         print("Its a sunny day. Put sunscreen.");
+//         break;
+//     case Weather.snowy:
+//         print("Get your skis.");
+//       break;
+//     case Weather.rainy:
+//     case Weather.cloudy:
+//       print("Please bring umbrella.");
+//       break;
+//     default:
+//         print("Sorry I am not familiar with such weather.");
+//       break;
+//   }
+//   //---------------------ternery operator vs else if---------------------------------------------------->
+//   //This program finds greatest number between two numbers using if else.
+//   int num1 = 10;
+//   int num2 = 15;
+//   int max = 0;
+//   if(num1>num2){
+//     max = num1;
+//   }else{
+//     max = num2;
+//   }
+//   print("The greatest number is $max");
+//   //This program finds greatest number between two numbers using ternary operator.
+//   int number1=10;
+//   int number2 = 15;
+//   int maxi = (number1 > number2) ? number1 : number2;
+//   print("The greatest number is $maxi");
+// //Ternary Operator Dart
+// var selection = 2;
+// var output = (selection == 2) ? 'Apple'  : 'Banana';
+// print(output);
+// //This is a dart program to print whether the person is a voter or not using a ternary operator.
+// var age = 18;
+// var check = (age >= 18) ? 'You are voter.' : 'You are not voter.' ;
+// print(check);
+// //Create an int variable age and initialize it with your age. Write ternary statement to print “Teenager” if age is between 13 and 19 and “Not Teenager” if age is not between 13 and 19.
+// int age1 = 24;
+// String result = (age1 >= 13 && age1 <= 19) ? "Teeneger " : "Not Teeneger";
+// print(result);
+
+// //=======================================================Loops==============================================================================================================================>
+// print("john Doe");
+// print("john Doe");
+// print("john Doe");
+// print("john Doe");
+// print("john Doe");
+// //Print Your Name 10 Times Using Loop
+// for(int i = 0;  i < 5 ; i++){
+//     print("Mufeeda");
+// }
+// //for loop
+// for(int i = 1; i <= 10; i++){
+//     print(i);
+// }
+// //Example 2: To Print 10 To 1 Using For Loop
+// for(int i = 10; i>=1;i--){
+//     print(i);
+// }
+// //Example 4: Display Sum of n Natural Numbers Using For Loop
+// int total = 0;
+// int n = 100;
+// for(int i=50; i<=100;i++){
+//     if(i%2==0){
+//         print(i);
+
+//     }
+// }
+// //Infinite Loop In Dart
+// for (int i = 1; i >= 1; i++) {
+//     print(i);
+//   }
+
+// List<String> footballPlayers = [
+//     'Ronaldo', 'messi','neymar','suvaris'
+// ];
+// footballPlayers.forEach((names) => print(names));
+// //print the total sum of all numbers and also the average value from the total.
+// List<int> numbers = [1,2,3,4,5];
+// int total = 0;
+// numbers.forEach((num) => total = total + num);
+// print("Total is $total.");
+// double avg = total / (numbers.length);
+// print("Average is $avg.");
+// //Print Unicode Value of Each Character of String
+// String name = "Mufeeda Beegum";
+// for(var codePoints in name.runes){
+//     print("Unicode of ${String.fromCharCode(codePoints)} is $codePoints");
+// }
+//--------------------------------------------------while loop----------------------------------------------------------------------------->
+// //This program prints 1 to 10 using while loop.
+// int i = 1;
+// while (i <= 10){
+//     print(i);
+//     i++;
+// }
+//This program prints 10 to 1 using while loop.
+int j = 10;
+while (j >= 1){
+    print(j);
+    j--;
+}
+//Example 3: Display Sum of n Natural Numbers Using While Loop
+ int total = 0;
+  int n = 100; // change as per required
+  int i =1;
+
+  while(i<=n){
+    total = total + i;
+    i++;
   }
-
-
-
-
-
-
-
-
+  
+  print("Total is $total");
 
 
 
