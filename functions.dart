@@ -196,3 +196,4 @@ double calculateInterest2(double principal, double rate, double time)
   int multipli(int n1, int n2) => n1 * n2;
   double divi(int n1, int n2) => n1 / n2;
 
+
