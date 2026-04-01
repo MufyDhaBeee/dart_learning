@@ -16,18 +16,18 @@ void main(){
   // add(num1, num2);
   // String name = presidentName();
   // print("The name from function is $name"); //no parameter & return type
-  //example 2 : no parameter & return type
-  int personAge = 17;
-  if(personAge >= voterAge()){
-    print("You can vote.");
-  }else{
-    print("Sorry, you can't vote.");
-  }
-  //Example 1: Parameter & Return Type
-  int num1 = 10;
-  int num2 = 40;
-  int total = add1(num1, num2);
-  print("The sum is $total");
+  // //example 2 : no parameter & return type
+  // int personAge = 17;
+  // if(personAge >= voterAge()){
+  //   print("You can vote.");
+  // }else{
+  //   print("Sorry, you can't vote.");
+  // }
+  // //Example 1: Parameter & Return Type
+  // int num1 = 10;
+  // int num2 = 40;
+  // int total = add1(num1, num2);
+  // print("The sum is $total");
   //Example 2: Parameter & Return Type
   double principal = 5000;
   double time = 3;
@@ -49,6 +49,47 @@ void main(){
  //eXAMPLE 1 :
  printInfo2("harry", "male");
  printInfo2("kelly", "female");
+ //Example 2: Use Of Required In Named Parameter
+ printInfo3(name: "Johnson", gender: "Male");
+ printInfo3(name: "Ruby", gender: "Female");
+ //Example: Use Of Optional Parameter
+ printInfo4("Babu", "Male");
+ printInfo4("Sabu", "Male", "Mr.");
+ printInfo4("shoba", "Female", "Ms.");
+//=================================Anonymous Function In Dart=====================================================================>
+//Example 1: Anonymous Function In Dart
+const fruits = ["apple", "banana", "kiwi", "grapes", "Orange"];
+fruits.forEach((fruit) {
+    print(fruit);
+  });
+  //Example 2: Anonymous Function In Dart
+  var cube = (int number){
+   return number  * number * number ;
+  };
+  print("The cube of 2 is ${cube(2)}");
+  print("The cube of 3 is ${cube(3)}");
+  //Example 1: Simple Interest Without Arrow Function
+  double principal1 = 5000;
+  double time1 = 3;
+  double rate1 = 3;
+
+  double result1 = calculateInterest1(principal, rate, time);
+  print("The simple interest is $result.");
+//Example 2: Simple Interest With Arrow Function
+ double principal2 = 5000;
+  double time2 = 3;
+  double rate2 = 3;
+
+  double result2 = calculateInterest1(principal, rate, time);
+  print("The simple interest is $result.");
+    //Example 3: Simple Calculation Using Arrow Function
+    int num1 = 100;
+  int num2 = 30;
+
+  print("The sum is ${add(num1, num2)}");
+  print("The diff is ${sub(num1, num2)}");
+  print("The mul is ${multipli(num1, num2)}");
+  print("The div is ${divi(num1, num2)}");
 
 
 }
@@ -71,35 +112,35 @@ void main(){
 //   return number * number * number;
 
 // }
-//====================================================function types======================================================================>
-//------------------------------------Function With No Parameter And No Return Type------------------------------------------------------------------->
-//Example 1: No Parameter & No Return Type
-void printNames(){
-  print("My name is Nancy wheeler");
-}
-//Example 2: No Parameter & No Return Type
-void printPrimeMinisterName(){
-  print("Narendra Modi");
-}
-//-----------------------------------Function With Parameter And No Return Type------------------------------------------------------------------------->
-//Example 1: Parameter & No Return Type.
-void printName1(String name){
-  print("Welcome, ${name}.");
-}
-////Example 2: Parameter & No Return Type.
-void add(int a, int b){
-  int sum = a + b;
-  print("The sum is $sum");
-}
-//--------------------------------------Function With No Parameter And Return Type----------------------------------------------------------------------->
-//Example 1: No Parameter & Return Type.
-String presidentName(){
-  return "Smt. Droupadi Murmu";
-}
-// Example 2: No Parameter & Return Type
-int voterAge(){
-  return 18;
-}
+// //====================================================function types======================================================================>
+// //------------------------------------Function With No Parameter And No Return Type------------------------------------------------------------------->
+// //Example 1: No Parameter & No Return Type
+// void printNames(){
+//   print("My name is Nancy wheeler");
+// }
+// //Example 2: No Parameter & No Return Type
+// void printPrimeMinisterName(){
+//   print("Narendra Modi");
+// }
+// //-----------------------------------Function With Parameter And No Return Type------------------------------------------------------------------------->
+// //Example 1: Parameter & No Return Type.
+// void printName1(String name){
+//   print("Welcome, ${name}.");
+// }
+// ////Example 2: Parameter & No Return Type.
+// void add(int a, int b){
+//   int sum = a + b;
+//   print("The sum is $sum");
+// }
+// //--------------------------------------Function With No Parameter And Return Type----------------------------------------------------------------------->
+// //Example 1: No Parameter & Return Type.
+// String presidentName(){
+//   return "Smt. Droupadi Murmu";
+// }
+// // Example 2: No Parameter & Return Type
+// int voterAge(){
+//   return 18;
+// }
 //----------------------------------Function With Parameter And Return Type------------------------------------------------------------------------------------->
 // Example 1: Parameter & Return Type
 int add1(int a, int b){
@@ -131,3 +172,27 @@ void printInfo2 (String? name, String? gender){
   print("Hello $name your gender is $gender.");
   
 }
+//Example 2: Use Of Required In Named Parameter
+void printInfo3({required String name, required String gender}){
+  print("Hello $name your gender is $gender.");
+}
+//============================Optional Parameter In Dart==========================================================================>
+//Example: Use Of Optional Parameter.
+void printInfo4(String name, String gender, [String? title]){
+  print("Hello $title $name your gender is $gender");
+}
+//===============================Arrow Function in Dart=============================================================================>
+//Example 1: Simple Interest Without Arrow Function.
+double calculateInterest1(double principal, double rate, double time) {
+  double interest = principal * rate * time / 100;
+  return interest;
+}
+//Example 2: Simple Interest With Arrow Function
+double calculateInterest2(double principal, double rate, double time) 
+=> principal * rate*time/100;
+  //Example 3: Simple Calculation Using Arrow Function
+  int add(int n1, int n2) => n1 + n2;
+  int sub(int n1, int n2) => n1 - n2;
+  int multipli(int n1, int n2) => n1 * n2;
+  double divi(int n1, int n2) => n1 / n2;
+
