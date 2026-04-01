@@ -1,3 +1,6 @@
+import 'dart:math';
+String global = "I am Global. Anyone can access me.";
+
 void main(){
   
   //================================================Functions=============================================================================>
@@ -90,9 +93,33 @@ fruits.forEach((fruit) {
   print("The diff is ${sub(num1, num2)}");
   print("The mul is ${multipli(num1, num2)}");
   print("The div is ${divi(num1, num2)}");
+  //========================Global Scope====================================================>
+ print(global);
+//==========================================MATH IN DART============================================
+// int min = 10;
+// int max = 20; 
+
+// int randomnum = min + Random().nextInt((max + 1) - min);
+  
+// print("Generated Random number between $min and $max is: $randomnum");  
+// List<int> randomList = List.generate(10, (_) => Random().nextInt(100)+1); 
+// print(randomList);
+//Example: Math In Dart
+int numb1 = 10;
+int numb2 = 2;
+num powernum = pow(numb1,numb2);
+num maxnum = max(numb1,numb2);
+num minnum = min(numb1, numb2);
+num squareroot = sqrt(25);
+print ("Power is $powernum");
+print("Maximun is $maxnum");
+print("Minimum is $minnum");
+print("Square root is $squareroot");
+
 
 
 }
+
 // //Example 1: Function That Prints Name
 // void printName(){
 //   print("hello everyone...nice to meet you");
