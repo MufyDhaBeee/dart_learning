@@ -159,15 +159,15 @@ print("Square root is $squareroot");
 //   int sum = a + b;
 //   print("The sum is $sum");
 // }
-// //--------------------------------------Function With No Parameter And Return Type----------------------------------------------------------------------->
-// //Example 1: No Parameter & Return Type.
-// String presidentName(){
-//   return "Smt. Droupadi Murmu";
-// }
-// // Example 2: No Parameter & Return Type
-// int voterAge(){
-//   return 18;
-// }
+//--------------------------------------Function With No Parameter And Return Type----------------------------------------------------------------------->
+//Example 1: No Parameter & Return Type.
+String presidentName(){
+  return "Smt. Droupadi Murmu";
+}
+// Example 2: No Parameter & Return Type
+int voterAge(){
+  return 18;
+}
 //----------------------------------Function With Parameter And Return Type------------------------------------------------------------------------------------->
 // Example 1: Parameter & Return Type
 int add1(int a, int b){
