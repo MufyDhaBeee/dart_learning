@@ -90,7 +90,6 @@ print("List before removing element:${list5}");
   //Multiply All Value By 2 Of All List
   var douledList = list7.map((n) => n * 2);
   print((douledList));
-  //Combine Two Or More List In Dart
   
 
 
