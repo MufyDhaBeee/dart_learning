@@ -1,17 +1,42 @@
-//2. Define a structure representing a student with attributes like name,
-// roll number, and marks. Write a program to store and display an array of student records.
-class StudentsRecord {
+// import 'dart:ffi';
+//
+// class Arithmetic{
+//   num? number1;
+//   num? number2;
+//   Arithmetic(this.number1,this.number2);
+//   num addition(){
+//     return number1!+number2!;
+//   }
+//   num subtraction(){
+//     return  number1!-number2!;
+//   }
+//   num multiplication(){
+//     return number1!*number2!;
+//   }
+//   num division(){
+//     return number1!/number2!;
+//   }
+//
+//
+//
+//
+//
+// }
+// void main(){
+//   Arithmetic arithmetic=Arithmetic(10,30);
+//   print(arithmetic.addition());
+//   Arithmetic arithmetic1=Arithmetic(40,10);
+//   print(arithmetic1.addition());
+//
+// }
+class Student {
   String? name;
-  int? roll_number;
-  double? marks;
-  StudentsRecord(){
-    print("Student details:");
+  int? age;
+  int? grade;
+
+  void displayInfo() {
+    print("Student name: $name.");
+    print("Student age: $age.");
+    print("Student grade: $grade.");
   }
-}
-void main(){
-  StudentsRecord studentsRecord = StudentsRecord();
-  studentsRecord.name = "Tom";
-  studentsRecord.roll_number = 10;
-  studentsRecord.marks = 80.5;
-  print("Student report is ${studentsRecord.name}, ${studentsRecord.roll_number}, ${studentsRecord.marks}");
 }
