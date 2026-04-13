@@ -1,0 +1,4 @@
+//inheritance:
+class Shapes {
+
+}
