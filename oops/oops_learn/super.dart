@@ -37,7 +37,35 @@ class Manager extends Employee{
     print("Manager Constructed");
   }
 }
-
+//Example 4: Super With Named Constructor In Dart:
+class Employee1 {
+  Employee1.manager() {
+    print("Employee named constructor");
+  }
+}
+class Manager1 extends Employee1 {
+  Manager1.manager() : super.manager() {
+    print("Manager named constructor");
+  }
+}
+//Example 5: Super With Multilevel Inheritance In Dart:
+class Laptop1{
+  void display(){
+    print("Laptop display");
+  }
+}
+class MacBook1 extends Laptop1{
+  void display(){
+    print("MacBook display");
+    super.display();
+  }
+}
+class MacBookPro extends MacBook1{
+  void display(){
+    print("MacBookPro display");
+    super.display();
+  }
+}
 void main() {
   //Example 1:
   MacBook macBook = MacBook();
@@ -47,4 +75,10 @@ void main() {
   tesla.display();
   //Example 3:
   Manager manager = Manager("Derek", 30000);
+  //Example 4:
+  Manager1 manager1 = Manager1.manager();
+  //Example 5:
+var macbookpro = MacBookPro();
+macbookpro.display();
+
 }
