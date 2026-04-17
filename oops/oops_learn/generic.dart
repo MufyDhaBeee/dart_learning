@@ -11,6 +11,11 @@ class DoubleData {
 }
 
 void main() {
+  try{
+
+  }catch(s){
+
+  }
   // Create an object of IntData class
   IntData intData = IntData(10);
   DoubleData doubleData = DoubleData(10.5);
