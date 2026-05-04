@@ -1,4 +1,4 @@
-//Task: Create a List of 3 fruits. Print the whole list, then print only the second fruit.
+//Task 11 : Create a List of 3 fruits. Print the whole list, then print only the second fruit.
 
 void main(){
   List<String>fruits = ['Apple', 'Banana', 'Mango'];

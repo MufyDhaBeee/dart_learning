@@ -1,4 +1,4 @@
-//Task: Start with a list ['Red', 'Blue']. Add 'Green', then remove the first color. Print the
+//Task 12:  Start with a list ['Red', 'Blue']. Add 'Green', then remove the first color. Print the
 // final list.
 
 void main(){
