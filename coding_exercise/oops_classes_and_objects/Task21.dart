@@ -12,6 +12,6 @@ class Rectangle{
    double get area => width! * height!;
 }
 void main(){
-  Rectangle rectangle = Rectangle(5, 10);
-  print(rectangle.area);
+  Rectangle rectangle = Rectangle(5.0, 3.0);
+  print('Area: ${rectangle.area}');
 }

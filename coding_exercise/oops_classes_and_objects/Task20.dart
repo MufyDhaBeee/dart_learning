@@ -7,11 +7,10 @@ class Dog{
 
 
   void bark(){
-    print('Name: $name');
+    print('$name says: Woof!');
   }
 }
 void main(){
-  Dog dog = Dog('');
-  dog.name = 'Woof!';
-  dog.bark();
+  Dog buddy = Dog('Buddy');
+  buddy.bark();
 }
